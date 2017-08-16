@@ -5,13 +5,15 @@ import { GC_USER_ID, GC_AUTH_TOKEN } from '../constants'
 const userId = localStorage.getItem(GC_USER_ID);
 
 class Header extends Component {
-  
+
   render() {
     return (
       <div className='flex pal justify-between nowrap orange'>
         <div className='flex flex-fixed black'>
           <div className='fw7 mr1'>Hacker News</div>
           <Link to='/' className='ml1 no-underline black'>new</Link>
+          <div className='ml1'>|</div>
+          <Link to='/search' className='ml1 no-underline black'>search</Link>
           {userId &&
             <div className='flex'>
               <div className='ml1'>|</div>
